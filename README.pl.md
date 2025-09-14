@@ -3,7 +3,7 @@
 ## 🌐 Języki
 [![EN](https://img.shields.io/badge/English-EN-blue)](./README.md)
 [![RU](https://img.shields.io/badge/Русский-RU-red)](./README.ru.md)
-![PL](https://img.shields.io/badge/Polski-PL-green)
+[![PL](https://img.shields.io/badge/Polski-PL-green)](./README.pl.md)
 [![DE](https://img.shields.io/badge/Deutsch-DE-yellow)](./README.de.md)
 
 Witamy w **oficjalnym repozytorium FreeSambo Combat Fighting System (FCFS)**.
