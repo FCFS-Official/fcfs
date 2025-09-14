@@ -1,0 +1,68 @@
+# FreeSambo Combat Fighting System (FCFS)
+
+**Sprachen:** [EN 🇬🇧](./README.md) · [RU 🇷🇺](./README.ru.md) · [PL 🇵🇱](./README.pl.md) · DE 🇩🇪
+
+Willkommen im **offiziellen Repository des FreeSambo Combat Fighting System (FCFS)**.
+Dieses Repository sowie die **offizielle Website [freesambo.com](https://freesambo.com)** sind die maßgeblichen Quellen für Regeln, Richtlinien und Dokumente für Athleten, Trainer, Schiedsrichter und Veranstalter.
+
+---
+
+## 📖 Über FCFS
+FCFS (**FreeSambo Combat Fighting System**) ist eine moderne Kampfsportart, entwickelt für dynamische und technische Kämpfe.
+Es kombiniert Elemente des Ringens im Stand und am Boden und fordert von den Athleten Können, Taktik und Kontrolle.
+
+Grundprinzipien:
+- Fokus auf **technische Überlegenheit** und Strategie.
+- Punktesystem fördert ständige Aktivität und Weiterentwicklung.
+- Sicheres Anwenden von Hebel- und Würgetechniken.
+- Gleiche Chancen für Anfänger und Profis durch ein Gürtelsystem.
+
+---
+
+## 📂 Inhalte des Repositories
+- **`rules/`** – offizielle Regeln in DOCX, PDF, HTML, Markdown.
+- **`documents/`** – zusätzliche Richtlinien und Materialien.
+- **`media/`** – offizielle Logos und Grafiken.
+- **`translations/`** – Übersetzungen der Regeln.
+
+---
+
+## 🥋 Gürtelsystem
+- Weiß – Anfänger
+- Gelb – Basis
+- Orange – fortgeschrittene Basis
+- Grün – Mittelstufe
+- Lila – Fortgeschritten
+- Braun – Vor-Meister
+- Schwarz – Meister
+
+---
+
+## ⚖️ Gewichtsklassen
+Siehe [Regeldokument](rules/) für offizielle Gewichtsklassen nach Alter und Niveau.
+
+---
+
+## 📑 Regeldokument
+Die neueste Version der offiziellen FCFS-Regeln finden Sie hier:
+👉 [PDF herunterladen](rules/FCFS.RU.pdf)
+👉 [Online ansehen (HTML)](rules/FCFS.RU.html)
+👉 [Offizielle Website](https://freesambo.com)
+
+---
+
+## 📜 Lizenz
+Alle offiziellen Dokumente werden von der **FCFS-Föderation** veröffentlicht.
+Vervielfältigung und Verbreitung sind **nur für nicht-kommerzielle, Bildungs- und Sportzwecke** mit entsprechender Namensnennung gestattet.
+Lizenz: **[CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/)**
+
+---
+
+## 📬 Kontakt
+- 🌐 Website: [freesambo.com](https://freesambo.com)
+- 📧 Email: info@freesambo.com
+- 🏆 Föderation: FreeSambo Combat Fighting System (FCFS)
+
+---
+
+> ⚠️ **Wichtig:** Die **offizielle Website ([freesambo.com](https://freesambo.com))** und dieses Repository sind die **einzigen offiziellen Quellen** der FCFS-Regeln und -Dokumente.
