@@ -43,14 +43,14 @@ Key principles:
 ---
 
 ## ⚖️ Weight Categories
-See [Rules Document](rules/) for official weight classes by age and skill.
+See [Rules Document](rules/en/FCFS.en.md) for official weight classes by age and skill.
 
 ---
 
 ## 📑 Rules Document
 The latest version of the official FCFS Rules can be found here:
-👉 [Download PDF](rules/FCFS.RU.pdf)
-👉 [View Online (HTML)](rules/FCFS.RU.html)
+👉 [Download PDF](rules/en/FCFS.en.pdf)
+👉 [View Online (HTML)](rules/en/FCFS.en.html)
 👉 [Official Website](https://freesambo.com)
 
 ---

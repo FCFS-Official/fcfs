@@ -43,14 +43,14 @@ Grundprinzipien:
 ---
 
 ## ⚖️ Gewichtsklassen
-Siehe [Regeldokument](rules/) für offizielle Gewichtsklassen nach Alter und Niveau.
+Siehe [Regeldokument](rules/de/FCFS.de.md) für offizielle Gewichtsklassen nach Alter und Niveau.
 
 ---
 
 ## 📑 Regeldokument
 Die neueste Version der offiziellen FCFS-Regeln finden Sie hier:
-👉 [PDF herunterladen](rules/FCFS.RU.pdf)
-👉 [Online ansehen (HTML)](rules/FCFS.RU.html)
+👉 [PDF herunterladen](rules/de/FCFS.de.pdf)
+👉 [Online ansehen (HTML)](rules/de/FCFS.de.html)
 👉 [Offizielle Website](https://freesambo.com)
 
 ---

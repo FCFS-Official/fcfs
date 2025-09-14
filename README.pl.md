@@ -43,14 +43,14 @@ Główne zasady:
 ---
 
 ## ⚖️ Kategorie wagowe
-Zobacz [dokument z zasadami](rules/) dla oficjalnych kategorii wagowych według wieku i poziomu.
+Zobacz [dokument z zasadami](rules/pl/FCFS.pl.md) dla oficjalnych kategorii wagowych według wieku i poziomu.
 
 ---
 
 ## 📑 Dokument zasad
 Najnowsza wersja zasad FCFS dostępna tutaj:
-👉 [Pobierz PDF](rules/FCFS.RU.pdf)
-👉 [Otwórz online (HTML)](rules/FCFS.RU.html)
+👉 [Pobierz PDF](rules/pl/FCFS.pl.pdf)
+👉 [Otwórz online (HTML)](rules/pl/FCFS.pl.html)
 👉 [Oficjalna strona](https://freesambo.com)
 
 ---
