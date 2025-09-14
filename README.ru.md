@@ -1,6 +1,10 @@
 # FreeSambo Combat Fighting System (FCFS)
 
-**Языки:** [EN 🇬🇧](./README.md) · RU 🇷🇺 · [PL 🇵🇱](./README.pl.md) · [DE 🇩🇪](./README.de.md)
+## 🌐 Языки
+[![EN](https://img.shields.io/badge/English-EN-blue)](./README.md)
+![RU](https://img.shields.io/badge/Русский-RU-red)
+[![PL](https://img.shields.io/badge/Polski-PL-green)](./README.pl.md)
+[![DE](https://img.shields.io/badge/Deutsch-DE-yellow)](./README.de.md)
 
 Добро пожаловать в **официальный репозиторий FreeSambo Combat Fighting System (FCFS)**.
 Этот репозиторий вместе с **официальным сайтом [freesambo.com](https://freesambo.com)** является источником официальных правил, регламентов и документов для спортсменов, тренеров, судей и организаторов соревнований.
