@@ -69,8 +69,11 @@ Key features:
 * May match the jacket colour or indicate grade.
 * Belt colours define FCFS athletes level:
   * White – Novice
+  * White-Yellow – Novice with basic skills
   * Yellow – Basic
+  * Yellow-Orange – Basic with elements of Basic-Advanced
   * Orange – Basic-Advanced
+  * Orange-Green – Basic-Advanced with elements of Intermediate
   * Green – Intermediate
   * Purple – Advanced
   * Brown – Pre-Master
@@ -80,9 +83,9 @@ Key features:
 
 ## 2.3 Footwear (Wrestling Shoes)
 
-* Only wrestling shoes with a soft, flexible sole are permitted.
-* Athletes may compete in white or black socks.
-* Competing barefoot is strictly prohibited.
+* Barefoot participation is allowed.
+* Soft shoes made of leather or similar material that cover the foot and ankle, without hard soles or metal elements, are permitted.
+* The use of other footwear (including wrestling shoes for freestyle wrestling with rubber soles) is prohibited.
 
 ## 2.4 Fight / Grappling Shorts
 
@@ -156,7 +159,6 @@ Each FCFS bout is supervised by **three referees** on the mat, while the entire 
 2. **Grounded / Lying** – The athlete touches the mat with **any part of the body other than the soles** — or with **three points of contact**.
 3. **Bridge** – Back toward the mat, touching the surface **only with the head and both feet**.
 4. **Side Position** – The athlete’s lateral torso (or a shoulder pressed to the torso) is on the mat; the upper‑back plane forms an angle of **up to 90 degrees** with the mat.
-   на уровне лопаток образует по отношению к ковру угол до 90 градусов.
 5. **Half‑Bridge** – Back toward the mat, touching the surface **with the head and one foot** (or with a shoulder and both feet, or with one foot only).
 6. **Chest / Prone Position** – The athlete lies on the chest or abdomen; the upper‑back plane forms an angle of **more than 90 degrees** with the mat.
 7. **Seated / Lower‑Back Position** – The athlete touches the mat with **one or both buttocks or the lower back**.
@@ -196,10 +198,10 @@ Each FCFS bout is supervised by **three referees** on the mat, while the entire 
 3. If a lock is fixed **before** the gong or the referee’s command **“Time\!”**, the 10‑second count continues despite the end of regulation time. A submission within those 10 seconds is recorded in the normal way.
 4. Ground work **continues** as long as **either** athlete is active – attacking, defending, switching holds, or dynamically changing position.
 5. Ground work **ends** when:
-* A submission is signalled.
-* One athlete stands up (see Exception 7.18).
-* Both athletes leave the contest area.
-* Both athletes become static without attack or defence; the referee then stands them up.
+  * A submission is signalled.
+  * One athlete stands up (see Exception 7.18).
+  * Both athletes leave the contest area.
+  * Both athletes become static without attack or defence; the referee then stands them up.
 6. A lock may be applied **only when the defender is grounded**; the attacker may be standing.
 7. The **start** of the lock is the moment the attacker secures the limb and clearly threatens a finish. The Mat Referee calls **“Submission\!”** and begins the count.
 8. Maintaining a continuous finishing threat for **10 seconds** awards **1 point**, regardless of further duration.
@@ -277,14 +279,14 @@ Each FCFS bout is supervised by **three referees** on the mat, while the entire 
 4. Gi Brabo Choke (lapel‑assisted)
 5. Arm Triangle Choke (Kata Gatame)
 
-### 8.2.3 Leg chokes (only with arm trap)
+### 8.2.4 Leg chokes (only with arm trap)
 
 1. Triangle Choke (San Kaku Jime)
 2. Rear Triangle Choke
 3. Triangle from Guard
 4. Reverse Triangle Choke
 
-### 8.2.4 Mixed (lapel‑assisted) chokes
+### 8.2.5 Mixed (lapel‑assisted) chokes
 
 1. Gi D’Arce (Brabo) Choke
 2. Anaconda Choke with Lapel
@@ -308,12 +310,12 @@ Each FCFS bout is supervised by **three referees** on the mat, while the entire 
 2. A pin is scored at **1 point for every 10 seconds** of control.
 3. The number of pins in a bout is unlimited; however, **each transition to ground allows a given pin to be scored only once**.
 4. A pin ends if:
-1) the pinned athlete turns to **chest‑down, prone, or seated** (but not lower‑back) so that the angle between the upper back (at shoulder‑blade level) and the mat exceeds **90 degrees**;
-2) the tightness of the hold is lost and becomes insufficient to effectively control the opponent’s torso and restrict their movement;
-3) either the attacker or the defender transitions to applying a submission hold;
-4) during the hold-down both athletes end up in the “off the mat” position;
-5) the athlete being held entangles the leg or torso of the holding athlete using both legs simultaneously (hooking / leg entanglement with both legs), or crosses their legs around the leg or torso of the holding athlete;
-6) the athlete being held is in a guard or half-guard position, i.e., has the leg of the holding athlete under control, regardless of the depth or strength of the grip.
+    * the pinned athlete turns to **chest‑down, prone, or seated** (but not lower‑back) so that the angle between the upper back (at shoulder‑blade level) and the mat exceeds **90 degrees**;
+    * the tightness of the hold is lost and becomes insufficient to effectively control the opponent’s torso and restrict their movement;
+    * either the attacker or the defender transitions to applying a submission hold;
+    * during the hold-down both athletes end up in the “off the mat” position;
+    * the athlete being held entangles the leg or torso of the holding athlete using both legs simultaneously (hooking / leg entanglement with both legs), or crosses their legs around the leg or torso of the holding athlete;
+    * the athlete being held is in a guard or half-guard position, i.e., has the leg of the holding athlete under control, regardless of the depth or strength of the grip.
 5. A pin is considered a **submission** if the pinned athlete signals surrender while being held.
 6. Stopping the bout at the request of the pinned athlete, when not caused by an attacker’s rules violation, is treated as a submission.
 7. If a pin is secured **before** the gong or the referee’s command **“Time\!”**, or before the end of the allotted ground‑work period, the 10‑second count continues under the standard rules – even after the bout time has expired. A submission within those 10 seconds is recorded in accordance with the rules..
@@ -327,9 +329,9 @@ Each FCFS bout is supervised by **three referees** on the mat, while the entire 
 
 1. **Explicit submission signal** – clear tapping with the hand, verbal acknowledgement, or any other obvious sign.
 2. When the hold reaches the fully‑fixed phase:
-1) **Arm lock **– if the arm is fully straightened and at risk of injury, the referee must immediately stop the bout and award the submission.
-2) **Leg lock (knee bar) **– if the knee is fully straightened and the attacker’s legs are locked, creating tension in the joint that is in danger, the bout is stopped at once and the submission is awarded.
-3) **Choke‑hold **– if the athlete loses the ability to defend actively or shows signs of unconsciousness, the referee immediately records the submission.
+  * **Arm lock** – if the arm is fully straightened and at risk of injury, the referee must immediately stop the bout and award the submission.
+  * **Leg lock (knee bar)** – if the knee is fully straightened and the attacker’s legs are locked, creating tension in the joint that is in danger, the bout is stopped at once and the submission is awarded.
+  * **Choke‑hold** – if the athlete loses the ability to defend actively or shows signs of unconsciousness, the referee immediately records the submission.
 3. **Dangerous application of a technique** – if the referee sees that a hold is being applied dangerously (e.g., knee bar against the natural bend, Achilles crush, or any lock forcing a joint beyond its normal range), he calls **“Stop\!”** and restarts the bout **standing**, **without penalising** either athlete.
 4. **Deliberately rough or prohibited technique** – if an athlete intentionally applies a hold with excessive force, brutality, or uses a banned technique, the referee issues a **caution** to the attacker.
 
@@ -339,9 +341,9 @@ Each FCFS bout is supervised by **three referees** on the mat, while the entire 
 1. During a bout, athletes may not leave the mat without the referee’s permission.
 2. With the referee’s approval, an athlete may leave the mat to adjust or replace equipment; a side referee must accompany the athlete.
 3. The position **“out of bounds”** is deemed to occur when:
-1) **Standing:** one athlete steps with **both feet** beyond the contest area boundary;
-2) **Lying:** **both** athletes move beyond the contest area boundary;
-3) **Lying:** one athlete makes contact with the surface beyond the **mat safety zone**.
+    * **Standing:** one athlete steps with **both feet** beyond the contest area boundary;
+    * **Lying:** **both** athletes move beyond the contest area boundary;
+    * **Lying:** one athlete makes contact with the surface beyond the **mat safety zone**.
 4. Out‑of‑bounds status is determined by any referee; in disputed cases, by majority vote of the referee trio.
 5. Once out of bounds, athletes obey the command **“Stop\!”**, return to the centre, and restart the bout **standing**.
 6. A throw (or counter‑throw) that **starts inside** the contest area and **finishes outside** it but **within the safety zone** is scored **provided** the defender’s torso remains entirely inside the safety zone after the fall.
@@ -388,15 +390,15 @@ Each FCFS bout is supervised by **three referees** on the mat, while the entire 
 
 1. If regulation time ends in a draw, a **one‑minute** overtime is given – **the Golden Score period**. During this minute the bout continues **until the first decisive action** (worth **1 point or more**) **or** the first caution is awarded.
 2. The Golden Score period begins on the referee’s command **“Fight\!”** and ends immediately upon the occurrence of **any** of the following:
-1) A **10‑second pin** or the opponent’s submission.
-2) A **10‑second joint‑ or choke‑hold** or the opponent’s submission.
-3) A scoring **throw** valued at **1 point or more**.
-4) The defender, escaping a counted joint‑ or choke‑hold, **stands up after three seconds or more** of count.
-5) A **caution** is issued for passivity or an illegal action.
-6) **Disqualification** of the opponent for a flagrant rules violation.
+    * A **10‑second pin** or the opponent’s submission.
+    * A **10‑second joint‑ or choke‑hold** or the opponent’s submission.
+    * A scoring **throw** valued at **1 point or more**.
+    * The defender, escaping a counted joint‑ or choke‑hold, **stands up after three seconds or more** of count.
+    * A **caution** is issued for passivity or an illegal action.
+    * **Disqualification** of the opponent for a flagrant rules violation.
 3. If no athlete has scored 1 point by the end of the 1‑minute overtime, the referee calls “Time\!” and the winner is decided by the referee trio, who assess:
-1) Which athlete was **more active and attacking** in both standing and ground phases.
-2) Which athlete **came closer** to completing a decisive action.
+    * Which athlete was **more active and attacking** in both standing and ground phases.
+    * Which athlete **came closer** to completing a decisive action.
 4. Victory is awarded to the wrestler who demonstrated the **greater activity** and a **clear attacking advantage**.
 
 (Test version) – If, after this additional minute, the referee trio still finds the bout difficult to judge, the Head Referee may authorise an extra 30‑second period conducted under the same rules as the Golden Score. This period is referred to as the **Diamond Score**.
@@ -413,10 +415,10 @@ Each FCFS bout is supervised by **three referees** on the mat, while the entire 
 
 Victory may be achieved:
 
-1.  Early (before time expires).
-2.  At the end of regulation time.
-3.  By **Golden Score**.
-4.  By decision of the referee trio.
+1. Early (before time expires).
+2. At the end of regulation time.
+3. By **Golden Score**.
+4. By decision of the referee trio.
 
 <a id="header-16"></a>
 # 16. Early Victory
@@ -521,12 +523,12 @@ Victory may be achieved:
 8. Intentional uniform violations (rolling up sleeves, untying belt or laces, removing wrestling shoes, etc.).
 9. Feigned wrestling.
 10. Forbidden grips:
-1) Intentional grip on shorts, laces, or inside wrestling shoes.
-2) Intentional grip on the opponent’s fingers.
-11.  Late arrival to the mat:
-1)  **30 s** – first caution.
-2)  **90 s** – second caution.
-3) **120 s** – third caution and removal from the bout.
+    * Intentional grip on shorts, laces, or inside wrestling shoes.
+    * Intentional grip on the opponent’s fingers.
+11. Late arrival to the mat:
+    * **30 s** – first caution.
+    * **90 s** – second caution.
+    * **120 s** – third caution and removal from the bout.
 
 ## 19.5 Prohibited Techniques That Receive an Immediate Caution
 
@@ -564,9 +566,9 @@ Victory may be achieved:
 1. Repeated execution of a prohibited technique.
 2. **Doctor’s decision** – the athlete is unable to continue (illness, injury, vomiting).
 3. Exceeding the limits of time‑outs or penalties.
-1) Failure to return to the mat within the **2‑minute** limit for medical treatment.
-2) Arrival at the mat **later than 2 minutes** after the first call.
-3) Accumulating **three warnings** and requiring a **fourth** warning.
+    * Failure to return to the mat within the **2‑minute** limit for medical treatment.
+    * Arrival at the mat **later than 2 minutes** after the first call.
+    * Accumulating **three warnings** and requiring a **fourth** warning.
 4. When an athlete is removed, he or she is placed according to the result **at the moment of removal**.
 
 <a id="header-21"></a>
@@ -586,56 +588,50 @@ Victory may be achieved:
 
 ### Divisions by belt level:
 
-* **Beginners **– **White, Yellow**
-* **Intermediate **– **Orange, Green**
-* **Advanced **– **Purple, Brown, Black**
+* **Beginners** – **White, White-Yello, Yellow, Yellow-Orange**
+* **Intermediate** – **Orange, Orange-Green, Green**
+* **Advanced** – **Purple, Brown, Black**
 
 ## U‑7 (6-7 yrs)
 
-Boys & Girls: 20, 24, 28, 33, 37, 42, +42 kg
+Boys & Girls: 20, 24, 28, 33, 37, 42, 42+ kg
 
 Bout duration: **2 minutes**
 
 ## U‑9 (8-9 yrs)
 
-Boys & Girls: 27, 31, 36, 41, 46, 51, +51 kg
+Boys & Girls: 27, 31, 36, 41, 46, 51, 51+ kg
 
 Bout duration: **2 minutes**
 
 ## U‑12 (10-11 yrs)
 
-Boys: 31, 36, 41, 46, 52, 58, 64, +64 kg
-
-Girls: 26, 30, 34, 39, 44, 50, 56, +56 kg
+Boys: 31, 36, 41, 46, 52, 58, 64, 64+ kg  
+Girls: 26, 30, 34, 39, 44, 50, 56, 56+ kg
 
 Bout duration: **3 minutes**
 
 ## U‑14 (12-14 yrs)
 
-Boys: 35, 39, 44, 50, 56, 62, 68, 75, +75 kg
-
-Girls: 34, 38, 42, 47, 52, 57, 64, +64 kg
+Boys: 35, 39, 44, 50, 56, 62, 68, 75, 75+ kg  
+Girls: 34, 38, 42, 47, 52, 57, 64, 64+ kg
 
 Bout duration: **3 minutes**
 
 ## B / I / A Youth (15-17 yrs)
 
-Boys: 42, 47, 53, 59, 65, 71, 77, 85, +85 kg
-
-Girls: 38, 43, 48, 52, 57, 63, 68, 75, +75 kg
+Boys: 42, 47, 53, 59, 65, 71, 77, 85, 85+ kg  
+Girls: 38, 43, 48, 52, 57, 63, 68, 75, 75+ kg
 
 Bout duration:
-
 * Beginners / Intermediate – **3 minutes**
 * Advanced – **4 minutes**
 
 ## B / I / A Adults (17+ yrs)
 
-Men: 60, 66, 72, 77, 84, 93, +93 kg
-
-Women: 50, 56, 62, 68, 74, +74 kg
+Men: 60, 66, 72, 77, 84, 93, 93+ kg
+Women: 50, 56, 62, 68, 74, 74+ kg
 
 Bout duration:
-
 * Beginners / Intermediate – **3 minutes**
 * Advanced – **4 minutes**

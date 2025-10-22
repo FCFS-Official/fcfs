@@ -1,0 +1,97 @@
+name: Build PDF Rules
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'rules/**/*.md'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'rules/**/*.md'
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v41
+        with:
+          files: |
+            rules/**/*.md
+
+      - name: Install Pandoc
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc
+
+      - name: Install LaTeX
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: |
+          sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-latex-extra texlive-xetex
+
+      - name: Create PDF output directory
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: mkdir -p rules/pdf
+
+      - name: Build PDF from changed markdown files
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: |
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            if [[ $file == *.md ]]; then
+              echo "Processing: $file"
+
+              # Get the directory and filename
+              dir=$(dirname "$file")
+              filename=$(basename "$file" .md)
+
+              # Create output path maintaining directory structure
+              output_dir="rules/pdf/$(basename $dir)"
+              mkdir -p "$output_dir"
+              output_file="$output_dir/${filename}.pdf"
+
+              # Convert markdown to PDF with XeLaTeX for better Unicode support
+              pandoc "$file" \
+                -o "$output_file" \
+                --pdf-engine=xelatex \
+                -V geometry:margin=1in \
+                -V documentclass=article \
+                -V fontsize=11pt \
+                --toc \
+                --toc-depth=3 \
+                -V colorlinks=true \
+                -V linkcolor=blue \
+                -V urlcolor=blue
+
+              echo "Created: $output_file"
+            fi
+          done
+
+      - name: Commit and push PDF files
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add rules/pdf/
+          git diff --staged --quiet || git commit -m "Auto-generate PDF rules from changed markdown files"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload PDF artifacts
+        if: steps.changed-files.outputs.any_changed == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: rules-pdf
+          path: rules/pdf/**/*.pdf
+          retention-days: 90
