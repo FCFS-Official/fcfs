@@ -1,7 +1,7 @@
 # Contributing to the FCFS Rules Repository
 
 ## Purpose of this document
-Welcome! This repository stores the official FreeSambo Combat Fighting System (FCFS) rules in many languages so coaches, referees, and organizers can rely on the same guidance everywhere. ✅ The English text in `/rules/en/FCFS.en.md` is the primary source. Every translation must match it exactly. The content is licensed under **Creative Commons BY-ND 4.0**, so all edits must be reviewed and merged through pull requests before they become official.
+Welcome! This repository stores the official FreeSambo Combat Fighting System (FCFS) rules in many languages so coaches, referees, and organizers can rely on the same guidance everywhere. The English text in `/rules/en/FCFS.en.md` (full version) and `/rules/en/FCFS.short.en.md` (compact version) is the **primary source**. Every translation must match it exactly. The content is licensed under **Creative Commons BY-ND 4.0**, so all edits must be reviewed and merged through pull requests before they become official.
 
 ## Before you start
 1. Create or sign in to your GitHub account. This lets the editors contact you and keeps a record of every change.
