@@ -55,6 +55,11 @@ Najnowsza wersja zasad FCFS dostępna tutaj:
 
 ---
 
+## 🤝 Współtworzenie
+Chcesz pomóc rozwijać zasoby FCFS? Zapoznaj się z plikiem [CONTRIBUTING.md](CONTRIBUTING.md), aby dowiedzieć się, jak zgłaszać problemy, proponować zmiany lub przesyłać tłumaczenia.
+
+---
+
 ## 📜 Licencja
 Wszystkie oficjalne dokumenty publikowane są przez **Federację FCFS**.
 Dystrybucja dozwolona **tylko w celach niekomercyjnych, edukacyjnych i sportowych** z obowiązkowym podaniem źródła.
