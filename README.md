@@ -55,6 +55,11 @@ The latest version of the official FCFS Rules can be found here:
 
 ---
 
+## 🤝 Contributing
+Want to help improve FCFS resources? Please review the [CONTRIBUTING.md](CONTRIBUTING.md) guide for instructions on reporting issues, suggesting updates, or submitting translations.
+
+---
+
 ## 📜 License
 All official documents are published by the **FCFS Federation**.
 Reproduction and distribution allowed **only for non-commercial, educational, and sporting purposes** with proper attribution.

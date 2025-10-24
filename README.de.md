@@ -55,6 +55,11 @@ Die neueste Version der offiziellen FCFS-Regeln finden Sie hier:
 
 ---
 
+## 🤝 Mitmachen
+Sie möchten die FCFS-Ressourcen verbessern? Bitte lesen Sie die [CONTRIBUTING.md](CONTRIBUTING.md), um zu erfahren, wie Sie Issues melden, Aktualisierungen vorschlagen oder Übersetzungen einreichen können.
+
+---
+
 ## 📜 Lizenz
 Alle offiziellen Dokumente werden von der **FCFS-Föderation** veröffentlicht.
 Vervielfältigung und Verbreitung sind **nur für nicht-kommerzielle, Bildungs- und Sportzwecke** mit entsprechender Namensnennung gestattet.
