@@ -341,7 +341,7 @@ Each FCFS bout is supervised by **three referees** on the mat, while the entire 
 1. During a bout, athletes may not leave the mat without the referee’s permission.
 2. With the referee’s approval, an athlete may leave the mat to adjust or replace equipment; a side referee must accompany the athlete.
 3. The position **“out of bounds”** is deemed to occur when:
-    * **Standing:** one athlete steps with **both feet** beyond the contest area boundary;
+    * **Standing:** both athletes step with **both feet** beyond the contest area boundary;
     * **Lying:** **both** athletes move beyond the contest area boundary;
     * **Lying:** one athlete makes contact with the surface beyond the **mat safety zone**.
 4. Out‑of‑bounds status is determined by any referee; in disputed cases, by majority vote of the referee trio.
