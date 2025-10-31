@@ -346,7 +346,7 @@ Trzymaniem nazywa się technikę, w której zawodnik przez określony czas zmusz
 1. W trakcie walki zawodnikom nie wolno samodzielnie opuszczać pola walki bez zgody sędziego..
 2. Sędzia może zezwolić zawodnikowi na opuszczenie maty w celu poprawy stroju – wówczas musi towarzyszyć mu sędzia boczny.
 3. Za pozycję „poza matą” uznaje się, gdy:
-   * W pozycji stojącej jeden z zawodników obiema stopami opuści strefę walki;
+   * W pozycji stojącej obaj zawodnicy obiema stopami opuścili strefę walki;
    * W pozycji leżącej obaj zawodnicy znajdują się poza strefą walki;
    * W pozycji leżącej jeden z zawodników ma kontakt z obszarem poza strefą bezpieczeństwa maty.
 4. O stwierdzeniu pozycji „poza strefą walki” decyduje główny sędzia będący na macie lub w przypadku sytuacji spornych, większość sędziów.

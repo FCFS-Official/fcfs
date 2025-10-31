@@ -177,7 +177,7 @@ All types of chokes are permitted (with and without the use of clothing, with ha
 1. During the match, athletes do not have the right to exit the mat without the referee's permission.
 2. At the referee's decision, an athlete may leave the mat to replace equipment (a side referee must accompany the athlete).
 3. The "out of bounds" position is considered if:
-    - in standing position, one of the athletes stepped with both feet beyond the working area boundary;
+    - in standing position, both athletes stepped with both feet beyond the working area boundary;
     - in "lying" position, both athletes ended up beyond the working area boundary;
     - in "lying" position, one of the athletes has contact with the area beyond the safety zone of the mat.
 4. During the match, the "out of bounds" position is determined by one of the referees, and in case of disputed moments, by majority vote of the referee trio.
