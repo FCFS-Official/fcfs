@@ -40,6 +40,11 @@ jobs:
         run: |
           sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-latex-extra texlive-xetex
 
+      - name: Install Fonts for Multi-Language Support
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: |
+          sudo apt-get install -y fonts-dejavu
+
       - name: Create PDF output directory
         if: steps.changed-files.outputs.any_changed == 'true'
         run: mkdir -p rules/pdf
@@ -60,18 +65,16 @@ jobs:
               mkdir -p "$output_dir"
               output_file="$output_dir/${filename}.pdf"
 
-              # Convert markdown to PDF with XeLaTeX for better Unicode support
-              pandoc "$file" \
-                -o "$output_file" \
-                --pdf-engine=xelatex \
-                -V geometry:margin=1in \
-                -V documentclass=article \
-                -V fontsize=11pt \
-                --toc \
-                --toc-depth=3 \
-                -V colorlinks=true \
-                -V linkcolor=blue \
-                -V urlcolor=blue
+              # Detect language and apply language-specific settings
+              if [[ $file == rules/ru/* ]]; then
+                pandoc "$file" -o "$output_file" --pdf-engine=xelatex -V mainfont="DejaVu Serif" -V lang=ru -V geometry:margin=1in -V documentclass=article -V fontsize=11pt --toc --toc-depth=3 -V colorlinks=true -V linkcolor=blue -V urlcolor=blue
+              elif [[ $file == rules/de/* ]]; then
+                pandoc "$file" -o "$output_file" --pdf-engine=xelatex -V mainfont="DejaVu Serif" -V lang=de -V geometry:margin=1in -V documentclass=article -V fontsize=11pt --toc --toc-depth=3 -V colorlinks=true -V linkcolor=blue -V urlcolor=blue
+              elif [[ $file == rules/pl/* ]]; then
+                pandoc "$file" -o "$output_file" --pdf-engine=xelatex -V mainfont="DejaVu Serif" -V lang=pl -V geometry:margin=1in -V documentclass=article -V fontsize=11pt --toc --toc-depth=3 -V colorlinks=true -V linkcolor=blue -V urlcolor=blue
+              else
+                pandoc "$file" -o "$output_file" --pdf-engine=xelatex -V mainfont="DejaVu Serif" -V lang=en -V geometry:margin=1in -V documentclass=article -V fontsize=11pt --toc --toc-depth=3 -V colorlinks=true -V linkcolor=blue -V urlcolor=blue
+              fi
 
               echo "Created: $output_file"
             fi
