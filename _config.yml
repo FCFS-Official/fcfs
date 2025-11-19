@@ -1,0 +1,44 @@
+# GitHub Pages Configuration for FCFS Rules
+title: "FreeSambo Combat Fighting System - Official Rules"
+description: "Official rules and regulations for FCFS competitions"
+baseurl: "/fcfs"
+url: "https://fcfs.github.io"
+
+# Theme
+theme: minima
+markdown: kramdown
+
+# Build settings
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  hard_wrap: false
+
+# Exclude files from the site
+exclude:
+  - .github/
+  - .git/
+  - .gitignore
+  - LICENSE.md
+  - CONTRIBUTING.md
+  - README*.md
+  - node_modules/
+  - vendor/
+
+# Include files
+include:
+  - rules/
+  - media/
+
+# Collections (optional, for future expansion)
+collections:
+  rules:
+    output: true
+    permalink: /rules/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"

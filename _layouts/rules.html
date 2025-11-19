@@ -1,0 +1,272 @@
+---
+layout: default
+---
+
+<div class="rules-header">
+  <div class="language-info">
+    <span class="flag">{{ page.lang_flag }}</span>
+    <h1>{{ page.title }}</h1>
+  </div>
+
+  <div class="download-section">
+    <h3>📥 Download PDF</h3>
+    <div class="pdf-links">
+      {% if page.pdf_full %}
+      <a href="{{ page.pdf_full | relative_url }}" download class="pdf-button">
+        📄 Full Rules
+      </a>
+      {% endif %}
+      {% if page.pdf_short %}
+      <a href="{{ page.pdf_short | relative_url }}" download class="pdf-button">
+        📄 Short Rules
+      </a>
+      {% endif %}
+      {% if page.pdf_pro %}
+      <a href="{{ page.pdf_pro | relative_url }}" download class="pdf-button">
+        📄 Pro Short Rules
+      </a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="language-switcher">
+    <h3>🌐 Other Languages</h3>
+    <div class="lang-buttons">
+      <a href="{{ '/rules-en.html' | relative_url }}" class="lang-btn {% if page.language == 'en' %}active{% endif %}">🇬🇧 English</a>
+      <a href="{{ '/rules-ru.html' | relative_url }}" class="lang-btn {% if page.language == 'ru' %}active{% endif %}">🇷🇺 Русский</a>
+      <a href="{{ '/rules-pl.html' | relative_url }}" class="lang-btn {% if page.language == 'pl' %}active{% endif %}">🇵🇱 Polski</a>
+      <a href="{{ '/rules-de.html' | relative_url }}" class="lang-btn {% if page.language == 'de' %}active{% endif %}">🇩🇪 Deutsch</a>
+    </div>
+  </div>
+</div>
+
+<hr style="margin: 30px 0;">
+
+<div class="rules-content">
+  {{ content }}
+</div>
+
+<div class="back-to-top">
+  <a href="#" class="btn-top">⬆️ Back to Top</a>
+</div>
+
+<style>
+  .rules-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .language-info {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .language-info .flag {
+    font-size: 3em;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .language-info h1 {
+    color: white;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .download-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .download-section h3 {
+    margin: 0 0 15px 0;
+    color: white;
+  }
+
+  .pdf-links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .pdf-button {
+    display: inline-block;
+    background: white;
+    color: #667eea;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+
+  .pdf-button:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    text-decoration: none;
+  }
+
+  .language-switcher {
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  .language-switcher h3 {
+    color: white;
+    margin-bottom: 15px;
+  }
+
+  .lang-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .lang-btn {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+  }
+
+  .lang-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+  }
+
+  .lang-btn.active {
+    background: white;
+    color: #667eea;
+    border-color: white;
+    font-weight: 700;
+  }
+
+  .rules-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+  .rules-content h1:first-child {
+    margin-top: 0;
+  }
+
+  .back-to-top {
+    text-align: center;
+    margin: 40px 0 20px 0;
+  }
+
+  .btn-top {
+    display: inline-block;
+    background: #667eea;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+
+  .btn-top:hover {
+    background: #764ba2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    text-decoration: none;
+  }
+
+  /* Ensure proper spacing for rules content */
+  .rules-content > *:first-child {
+    margin-top: 0;
+  }
+
+  .rules-content img {
+    max-width: 400px;
+  }
+
+  /* Table of contents styling */
+  .rules-content > ul:first-of-type {
+    background: #f6f8fa;
+    padding: 20px 20px 20px 50px;
+    border-radius: 6px;
+    border-left: 4px solid #667eea;
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .rules-header {
+      padding: 20px 15px;
+    }
+
+    .pdf-links,
+    .lang-buttons {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .pdf-button,
+    .lang-btn {
+      width: 100%;
+      text-align: center;
+    }
+
+    .rules-content {
+      padding: 15px;
+    }
+
+    .language-info .flag {
+      font-size: 2em;
+    }
+  }
+
+  /* Print styles */
+  @media print {
+    .rules-header,
+    .back-to-top,
+    header,
+    footer {
+      display: none;
+    }
+
+    .rules-content {
+      box-shadow: none;
+      max-width: 100%;
+    }
+  }
+</style>
+
+<script>
+  // Smooth scroll to top
+  document.addEventListener('DOMContentLoaded', function() {
+    const topButton = document.querySelector('.btn-top');
+    if (topButton) {
+      topButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    }
+  });
+</script>
