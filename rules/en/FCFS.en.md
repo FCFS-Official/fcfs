@@ -501,9 +501,9 @@ Victory may be achieved:
 
 ## 19.2 Cautions and Their Consequences
 
-1. **First caution** → opponent gains **1 point**
-2. **Second caution** → opponent gains **2 points**
-3. **Third caution** → **outright defeat** (disqualification due to cautions)
+1. **First caution** — opponent gains **1 point**
+2. **Second caution** — opponent gains **2 points**
+3. **Third caution** — **outright defeat** (disqualification due to cautions)
 
 ## 19.3 Additional Provisions
 

@@ -535,9 +535,9 @@ Ein Sieg kann auf folgende Weise erzielt werden:
 
 ## 19.2 Cautions und ihre Folgen
 
-1. **Erste Caution** → Gegner erhält **1 Punkt**
-2. **Zweite Caution** → Gegner erhält **2 Punkte**
-3. **Dritte Caution** → **Kampfniederlage** (Disqualifikation aufgrund von Cautions)
+1. **Erste Caution** — Gegner erhält **1 Punkt**
+2. **Zweite Caution** — Gegner erhält **2 Punkte**
+3. **Dritte Caution** — **Kampfniederlage** (Disqualifikation aufgrund von Cautions)
 
 ## 19.3 Zusätzliche Bestimmungen
 

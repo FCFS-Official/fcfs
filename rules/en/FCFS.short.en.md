@@ -244,9 +244,9 @@ If the main match time ends without a winner with a tie result, an additional mi
 3. If the athlete continues to violate rules or avoids fighting after a warning, they receive a caution.
 
 ## 13.2 Cautions and Their Consequences
-1. First caution → 1 point to opponent
-2. Second caution → 2 points to opponent
-3. Third caution → outright defeat (disqualification for cautions)
+1. First caution — 1 point to opponent
+2. Second caution — 2 points to opponent
+3. Third caution — outright defeat (disqualification for cautions)
 
 ## 13.3 Additional Provisions
 1. For gross violations or unsportsmanlike behavior, the referee may immediately assign outright defeat without prior cautions.

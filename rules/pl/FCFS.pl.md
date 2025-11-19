@@ -507,9 +507,9 @@ W systemie FCFS przewidziane są ostrzeżenia i upomnienia, które mogą być pr
 
 ## 19.2 Upomnienia i ich konsekwencje
 
-1. Pierwsze upomnienie → 1 punkt dla przeciwnika
-2. Drugie upomnienie → 2 punkty dla przeciwnika
-3. Trzecie upomnienie → przegrana przez dyskwalifikację (porażka za upomnienia)
+1. Pierwsze upomnienie — 1 punkt dla przeciwnika
+2. Drugie upomnienie — 2 punkty dla przeciwnika
+3. Trzecie upomnienie — przegrana przez dyskwalifikację (porażka za upomnienia)
 
 ## 19.3 Postanowienia dodatkowe
 
