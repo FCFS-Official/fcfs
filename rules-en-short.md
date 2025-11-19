@@ -1,6 +1,6 @@
 ---
 layout: rules
-title: "FCFS Official Rules - English (Short)"
+title: "FCFS Official Rules (Short)"
 language: "en"
 lang_name: "English"
 lang_flag: "🇬🇧"

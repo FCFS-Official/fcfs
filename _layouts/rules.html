@@ -3,6 +3,17 @@ layout: default
 ---
 
 <div class="rules-header">
+  <!-- Language Switcher (Top) -->
+  <div class="language-switcher">
+    <h3>{{ page.lang_switcher_label }}</h3>
+    <div class="lang-buttons">
+      <a href="{{ '/rules-en.html' | relative_url }}" class="lang-btn {% if page.language == 'en' %}active{% endif %}">🇬🇧 English</a>
+      <a href="{{ '/rules-ru.html' | relative_url }}" class="lang-btn {% if page.language == 'ru' %}active{% endif %}">🇷🇺 Русский</a>
+      <a href="{{ '/rules-pl.html' | relative_url }}" class="lang-btn {% if page.language == 'pl' %}active{% endif %}">🇵🇱 Polski</a>
+      <a href="{{ '/rules-de.html' | relative_url }}" class="lang-btn {% if page.language == 'de' %}active{% endif %}">🇩🇪 Deutsch</a>
+    </div>
+  </div>
+
   <div class="language-info">
     <span class="flag">{{ page.lang_flag }}</span>
     <h1>{{ page.title }}</h1>
@@ -51,17 +62,6 @@ layout: default
         📄 Pro (PDF)
       </a>
       {% endif %}
-    </div>
-  </div>
-
-  <!-- Language Switcher -->
-  <div class="language-switcher">
-    <h3>{{ page.lang_switcher_label }}</h3>
-    <div class="lang-buttons">
-      <a href="{{ '/rules-en.html' | relative_url }}" class="lang-btn {% if page.language == 'en' %}active{% endif %}">🇬🇧 English</a>
-      <a href="{{ '/rules-ru.html' | relative_url }}" class="lang-btn {% if page.language == 'ru' %}active{% endif %}">🇷🇺 Русский</a>
-      <a href="{{ '/rules-pl.html' | relative_url }}" class="lang-btn {% if page.language == 'pl' %}active{% endif %}">🇵🇱 Polski</a>
-      <a href="{{ '/rules-de.html' | relative_url }}" class="lang-btn {% if page.language == 'de' %}active{% endif %}">🇩🇪 Deutsch</a>
     </div>
   </div>
 </div>
