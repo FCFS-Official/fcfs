@@ -28,8 +28,28 @@ function Pandoc(doc)
     end
 
     -- Check for Div element (HTML divs become Pandoc Divs)
-    if block.t == "Div" and block.attributes and block.attributes.style then
-      if block.attributes.style:match('page%-break%-after') then
+    if block.t == "Div" then
+      local has_page_break = false
+
+      -- Check if Div has style attribute with page-break-after
+      if block.attributes and block.attributes.style then
+        if block.attributes.style:match('page%-break%-after') then
+          has_page_break = true
+        end
+      end
+
+      -- Also check if Div is empty and might be the page break div
+      if block.content and #block.content == 0 and block.attributes then
+        -- Empty div with attributes might be our page break
+        for k, v in pairs(block.attributes) do
+          if tostring(v):match('page%-break') then
+            has_page_break = true
+          end
+        end
+      end
+
+      if has_page_break then
+        io.stderr:write("*** FOUND PAGE BREAK DIV ***\n")
         -- Found page break div - keep it as LaTeX page break
         table.insert(new_blocks, pandoc.RawBlock('latex', '\\newpage'))
 
@@ -47,6 +67,7 @@ function Pandoc(doc)
     -- Check if this is RawBlock HTML (fallback)
     if block.t == "RawBlock" and block.format == "html" then
       if block.text:match('page%-break%-after') then
+        io.stderr:write("*** FOUND PAGE BREAK RAWBLOCK ***\n")
         -- Found page break - convert to LaTeX
         table.insert(new_blocks, pandoc.RawBlock('latex', '\\newpage'))
 
