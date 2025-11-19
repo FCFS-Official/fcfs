@@ -28,10 +28,14 @@ function Pandoc(doc)
   -- Add commands at the beginning to remove page number from title page
   table.insert(new_blocks, pandoc.RawBlock('latex', '\\thispagestyle{empty}'))
 
+  -- Debug: Add VISIBLE marker in PDF to confirm filter is running
+  table.insert(new_blocks, pandoc.Para({pandoc.Str("[DEBUG: LUA FILTER IS RUNNING - TOTAL BLOCKS: " .. #doc.blocks .. "]")}))
+
   while i <= #doc.blocks do
     local block = doc.blocks[i]
 
-    -- Debug: Log block type to stderr
+    -- Debug: Log block type to stderr and stdout
+    print("Block " .. i .. " type: " .. block.t)
     io.stderr:write("Block " .. i .. " type: " .. block.t .. "\n")
 
     -- Check for Div element (HTML divs become Pandoc Divs)
