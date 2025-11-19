@@ -1,10 +1,10 @@
 ---
 layout: rules
-title: "Oficjalne zasady FCFS (Pełne)"
+title: "Oficjalne zasady FCFS (Krótkie)"
 language: "pl"
 lang_name: "Polski"
 lang_flag: "🇵🇱"
-version: "full"
+version: "short"
 has_versions: true
 url_full: "/rules-pl.html"
 url_short: "/rules-pl-short.html"
@@ -20,4 +20,4 @@ pdf_short: "rules/pdf/pl/FCFS.short.pl.pdf"
 pdf_pro: "rules/pdf/pl/FCFS.pro.short.pl.pdf"
 ---
 
-{% include_relative rules/pl/FCFS.pl.md %}
+{% include_relative rules/pl/FCFS.short.pl.md %}

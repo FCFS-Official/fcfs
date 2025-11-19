@@ -8,29 +8,55 @@ layout: default
     <h1>{{ page.title }}</h1>
   </div>
 
+  <!-- Version Switcher -->
+  {% if page.has_versions %}
+  <div class="version-switcher">
+    <h3>{{ page.version_label }}</h3>
+    <div class="version-buttons">
+      {% if page.url_full %}
+      <a href="{{ page.url_full | relative_url }}" class="version-btn {% if page.version == 'full' %}active{% endif %}">
+        {{ page.label_full }}
+      </a>
+      {% endif %}
+      {% if page.url_short %}
+      <a href="{{ page.url_short | relative_url }}" class="version-btn {% if page.version == 'short' %}active{% endif %}">
+        {{ page.label_short }}
+      </a>
+      {% endif %}
+      {% if page.url_pro %}
+      <a href="{{ page.url_pro | relative_url }}" class="version-btn {% if page.version == 'pro' %}active{% endif %}">
+        Pro
+      </a>
+      {% endif %}
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- Download Section -->
   <div class="download-section">
-    <h3>📥 Download PDF</h3>
+    <h3>{{ page.download_label }}</h3>
     <div class="pdf-links">
       {% if page.pdf_full %}
       <a href="{{ page.pdf_full | relative_url }}" download class="pdf-button">
-        📄 Full Rules
+        📄 {{ page.label_full }} (PDF)
       </a>
       {% endif %}
       {% if page.pdf_short %}
       <a href="{{ page.pdf_short | relative_url }}" download class="pdf-button">
-        📄 Short Rules
+        📄 {{ page.label_short }} (PDF)
       </a>
       {% endif %}
       {% if page.pdf_pro %}
       <a href="{{ page.pdf_pro | relative_url }}" download class="pdf-button">
-        📄 Pro Short Rules
+        📄 Pro (PDF)
       </a>
       {% endif %}
     </div>
   </div>
 
+  <!-- Language Switcher -->
   <div class="language-switcher">
-    <h3>🌐 Other Languages</h3>
+    <h3>{{ page.lang_switcher_label }}</h3>
     <div class="lang-buttons">
       <a href="{{ '/rules-en.html' | relative_url }}" class="lang-btn {% if page.language == 'en' %}active{% endif %}">🇬🇧 English</a>
       <a href="{{ '/rules-ru.html' | relative_url }}" class="lang-btn {% if page.language == 'ru' %}active{% endif %}">🇷🇺 Русский</a>
@@ -47,7 +73,7 @@ layout: default
 </div>
 
 <div class="back-to-top">
-  <a href="#" class="btn-top">⬆️ Back to Top</a>
+  <a href="#" class="btn-top">{{ page.back_to_top }}</a>
 </div>
 
 <style>
@@ -76,6 +102,57 @@ layout: default
     border: none;
     margin: 0;
     padding: 0;
+  }
+
+  /* Version Switcher */
+  .version-switcher {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .version-switcher h3 {
+    margin: 0 0 15px 0;
+    color: white;
+    font-size: 1.1em;
+  }
+
+  .version-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .version-btn {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05em;
+    transition: all 0.3s;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .version-btn:hover {
+    background: rgba(255, 255, 255, 0.35);
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .version-btn.active {
+    background: white;
+    color: #667eea;
+    border-color: white;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   }
 
   .download-section {
@@ -219,13 +296,15 @@ layout: default
     }
 
     .pdf-links,
-    .lang-buttons {
+    .lang-buttons,
+    .version-buttons {
       flex-direction: column;
       align-items: stretch;
     }
 
     .pdf-button,
-    .lang-btn {
+    .lang-btn,
+    .version-btn {
       width: 100%;
       text-align: center;
     }

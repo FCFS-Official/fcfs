@@ -25,7 +25,7 @@ title: "FCFS - Official Rules"
     <p class="download-links">
       <a href="rules/pdf/ru/FCFS.ru.pdf" download>📄 Полные правила (PDF)</a><br>
       <a href="rules/pdf/ru/FCFS.short.ru.pdf" download>📄 Краткие правила (PDF)</a><br>
-      <a href="rules/pdf/ru/FCFS.pro.short.ru.pdf" download>📄 Краткие правила (Про) (PDF)</a>
+      <a href="rules/pdf/ru/FCFS.pro.short.ru.pdf" download>📄 Pro (PDF)</a>
     </p>
   </div>
 
@@ -35,7 +35,7 @@ title: "FCFS - Official Rules"
     <p class="download-links">
       <a href="rules/pdf/pl/FCFS.pl.pdf" download>📄 Pełne zasady (PDF)</a><br>
       <a href="rules/pdf/pl/FCFS.short.pl.pdf" download>📄 Krótkie zasady (PDF)</a><br>
-      <a href="rules/pdf/pl/FCFS.pro.short.pl.pdf" download>📄 Krótkie zasady (Pro) (PDF)</a>
+      <a href="rules/pdf/pl/FCFS.pro.short.pl.pdf" download>📄 Pro (PDF)</a>
     </p>
   </div>
 

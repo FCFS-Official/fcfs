@@ -1,10 +1,10 @@
 ---
 layout: rules
-title: "Официальные правила FCFS (Полные)"
+title: "Официальные правила FCFS (Pro)"
 language: "ru"
 lang_name: "Русский"
 lang_flag: "🇷🇺"
-version: "full"
+version: "pro"
 has_versions: true
 url_full: "/rules-ru.html"
 url_short: "/rules-ru-short.html"
@@ -20,4 +20,4 @@ pdf_short: "rules/pdf/ru/FCFS.short.ru.pdf"
 pdf_pro: "rules/pdf/ru/FCFS.pro.short.ru.pdf"
 ---
 
-{% include_relative rules/ru/FCFS.ru.md %}
+{% include_relative rules/ru/FCFS.pro.short.ru.md %}
