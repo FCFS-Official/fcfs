@@ -3,20 +3,21 @@
 
 local in_manual_toc = false
 local found_page_break = false
-local on_title_page = true
 
--- Helper function to resize images on title page
-function process_block_for_images(block)
-  if block.t == "Para" or block.t == "Plain" then
-    -- Check if this paragraph contains an image
-    for i, inline in ipairs(block.content) do
-      if inline.t == "Image" then
-        -- Add width attribute to images on title page
-        inline.attributes.width = "70%"
-      end
-    end
+-- Image filter runs first - resize all images on title page (before first Header)
+local seen_first_header = false
+function Image(img)
+  if not seen_first_header then
+    -- We're still on the title page
+    img.attributes.width = "70%"
   end
-  return block
+  return img
+end
+
+-- Header filter to track when we've left the title page
+function Header(h)
+  seen_first_header = true
+  return h
 end
 
 -- Process the document to find page break and remove manual TOC
@@ -53,7 +54,6 @@ function Pandoc(doc)
 
       if has_page_break then
         found_page_break = true
-        on_title_page = false
         -- Found page break div - insert page break
         table.insert(new_blocks, pandoc.RawBlock('latex', '\\newpage'))
 
@@ -66,20 +66,12 @@ function Pandoc(doc)
         i = i + 1
         goto continue
       end
-
-      -- Process Div content for images on title page
-      if on_title_page and block.content then
-        for j, inner_block in ipairs(block.content) do
-          block.content[j] = process_block_for_images(inner_block)
-        end
-      end
     end
 
     -- Check if this is RawBlock HTML (fallback)
     if block.t == "RawBlock" and block.format == "html" then
       if block.text:match('page%-break%-after') then
         found_page_break = true
-        on_title_page = false
         -- Found page break - convert to LaTeX
         table.insert(new_blocks, pandoc.RawBlock('latex', '\\newpage'))
 
@@ -92,11 +84,6 @@ function Pandoc(doc)
         i = i + 1
         goto continue
       end
-    end
-
-    -- Process regular blocks for images on title page
-    if on_title_page then
-      block = process_block_for_images(block)
     end
 
     -- If we're in manual TOC section, skip content until we hit the separator
@@ -122,3 +109,10 @@ function Pandoc(doc)
 
   return pandoc.Pandoc(new_blocks, doc.meta)
 end
+
+-- Return filters in the order they should be applied
+return {
+  {Image = Image},  -- First pass: resize images on title page
+  {Header = Header}, -- Track when we leave title page
+  {Pandoc = Pandoc}  -- Second pass: handle TOC and page breaks
+}
