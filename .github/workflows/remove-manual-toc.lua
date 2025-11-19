@@ -3,61 +3,56 @@
 
 local in_manual_toc = false
 local found_page_break = false
-local toc_inserted = false
+local cover_complete = false
 
-function Div(elem)
-  -- Check if this is the page break div
-  if elem.attributes.style and elem.attributes.style:match("page%-break%-after") then
-    found_page_break = true
-    in_manual_toc = true
+-- Process the document to find page break and remove manual TOC
+function Pandoc(doc)
+  local new_blocks = {}
+  local i = 1
 
-    -- After the page break, insert the Pandoc-generated TOC
-    -- Use a placeholder that Pandoc will recognize
-    local toc_placeholder = pandoc.RawBlock('latex', '\\tableofcontents\n\\newpage')
+  while i <= #doc.blocks do
+    local block = doc.blocks[i]
 
-    return {elem, toc_placeholder}  -- Return both the page break and TOC
-  end
-  return elem
-end
+    -- Check if this is a RawBlock with page break HTML
+    if block.t == "RawBlock" and block.format == "html" then
+      local html = block.text
+      if html:match('page%-break%-after') then
+        -- Found page break - keep it
+        table.insert(new_blocks, block)
 
-function Header(elem)
-  -- If we're in the manual TOC section and find a header
-  if in_manual_toc and elem.level == 2 then
-    -- Check if this is the "Содержание" or other TOC headers
-    local text = pandoc.utils.stringify(elem)
-    if text == "Содержание" or text == "Table of Contents" or
-       text == "Inhaltsverzeichnis" or text == "Spis treści" then
-      return {}  -- Remove this header
+        -- Insert LaTeX page break and TOC
+        table.insert(new_blocks, pandoc.RawBlock('latex', '\\newpage'))
+        table.insert(new_blocks, pandoc.RawBlock('latex', '\\tableofcontents'))
+        table.insert(new_blocks, pandoc.RawBlock('latex', '\\newpage'))
+
+        -- Mark that we're now in manual TOC section
+        in_manual_toc = true
+        found_page_break = true
+        i = i + 1
+        goto continue
+      end
     end
-  end
-  -- If we hit a level 1 header, we're past the TOC
-  if elem.level == 1 then
-    in_manual_toc = false
-  end
-  return elem
-end
 
-function BulletList(elem)
-  -- Remove bullet lists in the manual TOC section
-  if in_manual_toc then
-    return {}
-  end
-  return elem
-end
+    -- If we're in manual TOC section, skip content until we hit the separator
+    if in_manual_toc then
+      -- Check for horizontal rule (---)
+      if block.t == "HorizontalRule" then
+        in_manual_toc = false
+        i = i + 1
+        goto continue
+      end
 
-function HorizontalRule(elem)
-  -- The --- separator marks the end of manual TOC
-  if in_manual_toc and found_page_break then
-    in_manual_toc = false
-    return {}  -- Remove the separator itself
-  end
-  return elem
-end
+      -- Skip this block (it's part of manual TOC)
+      i = i + 1
+      goto continue
+    end
 
--- Return the filter functions
-return {
-  {Div = Div},
-  {Header = Header},
-  {BulletList = BulletList},
-  {HorizontalRule = HorizontalRule}
-}
+    -- Keep all other blocks
+    table.insert(new_blocks, block)
+    i = i + 1
+
+    ::continue::
+  end
+
+  return pandoc.Pandoc(new_blocks, doc.meta)
+end
