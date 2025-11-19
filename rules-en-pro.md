@@ -1,10 +1,10 @@
 ---
 layout: rules
-title: "FCFS Official Rules (Short)"
+title: "FCFS Official Rules (Pro)"
 language: "en"
 lang_name: "English"
 lang_flag: "🇬🇧"
-version: "short"
+version: "pro"
 has_versions: true
 url_full: "/rules-en.html"
 url_short: "/rules-en-short.html"
@@ -20,4 +20,4 @@ pdf_short: "rules/pdf/en/FCFS.short.en.pdf"
 pdf_pro: "rules/pdf/en/FCFS.pro.short.en.pdf"
 ---
 
-{% include_relative rules/en/FCFS.short.en.md %}
+{% include_relative rules/en/FCFS.pro.short.en.md %}
