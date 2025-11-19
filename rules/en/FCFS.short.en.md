@@ -6,7 +6,7 @@
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 - [1. Permitted Actions in FCFS](#short-1)
 - [2. Uniform and Equipment Regulations](#short-2)
 - [3. Referee Panel](#short-3)

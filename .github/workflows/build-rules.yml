@@ -44,7 +44,7 @@ jobs:
       - name: Install Fonts for Multi-Language Support
         if: steps.changed-files.outputs.any_changed == 'true'
         run: |
-          sudo apt-get install -y fonts-dejavu
+          sudo apt-get install -y fonts-noto fonts-liberation fonts-dejavu
 
       - name: Create PDF output directory
         if: steps.changed-files.outputs.any_changed == 'true'
@@ -71,13 +71,13 @@ jobs:
               md_dir=$(dirname "$file")
 
               if [[ $file == rules/ru/* ]]; then
-                pandoc "$file" -o "$output_file" --pdf-engine=xelatex --resource-path="$md_dir:." -f markdown+raw_html -V mainfont="DejaVu Serif" -V lang=ru -V geometry:margin=1in -V documentclass=article -V fontsize=11pt -V colorlinks=true -V linkcolor=blue -V urlcolor=blue
+                pandoc "$file" -o "$output_file" --pdf-engine=xelatex --resource-path="$md_dir:." -f markdown+raw_html-implicit_figures --toc --toc-depth=3 -V toc-title="Содержание" -V mainfont="Noto Serif" -V lang=ru -V geometry:margin=1in -V documentclass=article -V fontsize=11pt -V colorlinks=true -V linkcolor=blue -V urlcolor=blue
               elif [[ $file == rules/de/* ]]; then
-                pandoc "$file" -o "$output_file" --pdf-engine=xelatex --resource-path="$md_dir:." -f markdown+raw_html -V mainfont="DejaVu Serif" -V lang=de -V geometry:margin=1in -V documentclass=article -V fontsize=11pt -V colorlinks=true -V linkcolor=blue -V urlcolor=blue
+                pandoc "$file" -o "$output_file" --pdf-engine=xelatex --resource-path="$md_dir:." -f markdown+raw_html-implicit_figures --toc --toc-depth=3 -V toc-title="Inhaltsverzeichnis" -V mainfont="Noto Serif" -V lang=de -V geometry:margin=1in -V documentclass=article -V fontsize=11pt -V colorlinks=true -V linkcolor=blue -V urlcolor=blue
               elif [[ $file == rules/pl/* ]]; then
-                pandoc "$file" -o "$output_file" --pdf-engine=xelatex --resource-path="$md_dir:." -f markdown+raw_html -V mainfont="DejaVu Serif" -V lang=pl -V geometry:margin=1in -V documentclass=article -V fontsize=11pt -V colorlinks=true -V linkcolor=blue -V urlcolor=blue
+                pandoc "$file" -o "$output_file" --pdf-engine=xelatex --resource-path="$md_dir:." -f markdown+raw_html-implicit_figures --toc --toc-depth=3 -V toc-title="Spis treści" -V mainfont="Noto Serif" -V lang=pl -V geometry:margin=1in -V documentclass=article -V fontsize=11pt -V colorlinks=true -V linkcolor=blue -V urlcolor=blue
               else
-                pandoc "$file" -o "$output_file" --pdf-engine=xelatex --resource-path="$md_dir:." -f markdown+raw_html -V mainfont="DejaVu Serif" -V lang=en -V geometry:margin=1in -V documentclass=article -V fontsize=11pt -V colorlinks=true -V linkcolor=blue -V urlcolor=blue
+                pandoc "$file" -o "$output_file" --pdf-engine=xelatex --resource-path="$md_dir:." -f markdown+raw_html-implicit_figures --toc --toc-depth=3 -V toc-title="Table of Contents" -V mainfont="Noto Serif" -V lang=en -V geometry:margin=1in -V documentclass=article -V fontsize=11pt -V colorlinks=true -V linkcolor=blue -V urlcolor=blue
               fi
 
               echo "Created: $output_file"

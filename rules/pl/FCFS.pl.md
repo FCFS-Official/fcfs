@@ -4,7 +4,7 @@
 
 **Oficjalne zasady: 25.03.2025**
 
-## 📑 Spis treści
+## Spis treści
 - [1. Postanowienia ogólne](#header-1)
 - [2. Strój zawodników](#header-2)
 - [3. Kolegium sędziowskie](#header-3)

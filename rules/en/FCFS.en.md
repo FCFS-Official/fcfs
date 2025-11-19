@@ -4,7 +4,7 @@
 
 **Official rules: 25.03.2025**
 
-## 📑 Table of Contents
+## Table of Contents
 - [1. General Provisions](#header-1)
 - [2. Uniform and Equipment Regulations](#header-2)
 - [3. Refereeing Panel](#header-3)
