@@ -33,11 +33,14 @@ Grundprinzipien:
 
 ## 🥋 Gürtelsystem
 - Weiß – Anfänger
+- Weiß-Gelb – Anfänger mit Grundkenntnissen
 - Gelb – Basis
-- Orange – fortgeschrittene Basis
+- Gelb-Orange – Basis mit Elementen von Basis-Fortgeschritten
+- Orange – Basis-Fortgeschritten
+- Orange-Grün – Basis-Fortgeschritten mit Elementen der Mittelstufe
 - Grün – Mittelstufe
 - Lila – Fortgeschritten
-- Braun – Vor-Meister
+- Braun – Vormeister
 - Schwarz – Meister
 
 ---

@@ -32,13 +32,16 @@ Key principles:
 ---
 
 ## 🥋 Belt Ranking System
-- White – beginner
-- Yellow – basic
-- Orange – advanced basic
-- Green – intermediate
-- Purple – advanced
-- Brown – pre-master
-- Black – master
+- White – Novice
+- White-Yellow – Novice with basic skills
+- Yellow – Basic
+- Yellow-Orange – Basic with elements of Basic-Advanced
+- Orange – Basic-Advanced
+- Orange-Green – Basic-Advanced with elements of Intermediate
+- Green – Intermediate
+- Purple – Advanced
+- Brown – Pre-Master
+- Black – Master
 
 ---
 

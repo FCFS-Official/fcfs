@@ -32,13 +32,16 @@ Główne zasady:
 ---
 
 ## 🥋 System pasów
-- Biały – początkujący
-- Żółty – podstawowy
-- Pomarańczowy – zaawansowany podstawowy
-- Zielony – średni
-- Fioletowy – zaawansowany
-- Brązowy – przedmistrzowski
-- Czarny – mistrzowski
+- Biały – poziom początkujący
+- Biało-żółty – poziom początkowy z opanowanymi podstawowymi umiejętnościami
+- Żółty – poziom podstawowy
+- Żółto-pomarańczowy – poziom podstawowy z elementami techniki zaawansowanej
+- Pomarańczowy – poziom podstawowy zaawansowany
+- Pomarańczowo-zielony – rozwinięte umiejętności podstawowe, przygotowanie do poziomu średniego
+- Zielony – poziom średniozaawansowany
+- Purpurowy – poziom zaawansowany
+- Brązowy – poziom przedmistrzowski
+- Czarny – poziom mistrzowski
 
 ---
 

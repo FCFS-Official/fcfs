@@ -62,9 +62,12 @@ title: "FCFS - Official Rules"
 - ✅ Equal opportunities through structured belt system
 
 ### Belt Ranking System:
-- **White** – Beginner
+- **White** – Novice
+- **White-Yellow** – Novice with basic skills
 - **Yellow** – Basic
-- **Orange** – Advanced Basic
+- **Yellow-Orange** – Basic with elements of Basic-Advanced
+- **Orange** – Basic-Advanced
+- **Orange-Green** – Basic-Advanced with elements of Intermediate
 - **Green** – Intermediate
 - **Purple** – Advanced
 - **Brown** – Pre-Master
