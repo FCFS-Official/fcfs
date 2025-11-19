@@ -1,4 +1,4 @@
-![Официальный логотип](../../media/logo/sign/raster/half_dragon_red_white.png)
+![](../../media/logo/sign/raster/half_dragon_red_white.png)
 
 **Официальные правила (укороченная версия): 07.10.2025**  
 **FCFS - Gi  / FCFS - No Gi**

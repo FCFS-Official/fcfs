@@ -1,4 +1,4 @@
-![Offizielles Logo](../../media/logo/sign/raster/half_dragon_red_white.png)
+![](../../media/logo/sign/raster/half_dragon_red_white.png)
 
 **Regelwerk: 25.03.2025**
 

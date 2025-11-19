@@ -7,6 +7,17 @@
   <meta name="description" content="{{ page.description | default: site.description }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <style>
+    /* Dark Theme Colors matching FCFS site */
+    :root {
+      --fcfs-dark-bg: #1a1a1a;
+      --fcfs-darker-bg: #0f0f0f;
+      --fcfs-red: #EF4444;
+      --fcfs-red-hover: #DC2626;
+      --fcfs-light-text: #e5e5e5;
+      --fcfs-muted-text: #a0a0a0;
+      --fcfs-border: #333;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -16,8 +27,8 @@
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       line-height: 1.6;
-      color: #24292e;
-      background-color: #ffffff;
+      color: var(--fcfs-light-text);
+      background-color: var(--fcfs-darker-bg);
       padding: 20px;
     }
 
@@ -28,11 +39,13 @@
     }
 
     header {
-      background-color: #24292e;
-      color: white;
+      background-color: var(--fcfs-dark-bg);
+      color: var(--fcfs-light-text);
       padding: 20px 0;
       margin-bottom: 40px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      border: 1px solid var(--fcfs-border);
+      border-radius: 8px;
     }
 
     header .container {
@@ -45,10 +58,11 @@
     header h1 {
       font-size: 1.8em;
       margin-bottom: 5px;
+      color: var(--fcfs-light-text);
     }
 
     header p {
-      color: #959da5;
+      color: var(--fcfs-muted-text);
       font-size: 0.9em;
     }
 
@@ -57,16 +71,18 @@
     }
 
     nav a {
-      color: white;
+      color: var(--fcfs-light-text);
       text-decoration: none;
       margin-left: 20px;
       padding: 8px 15px;
       border-radius: 4px;
-      transition: background-color 0.2s;
+      transition: all 0.3s;
+      border: 1px solid transparent;
     }
 
     nav a:hover {
-      background-color: #586069;
+      background-color: rgba(255, 255, 255, 0.08);
+      border-color: var(--fcfs-red);
     }
 
     main {
@@ -76,19 +92,24 @@
     footer {
       margin-top: 60px;
       padding: 30px 0;
-      border-top: 2px solid #e1e4e8;
+      border-top: 2px solid var(--fcfs-border);
       text-align: center;
-      color: #586069;
+      color: var(--fcfs-muted-text);
       font-size: 0.9em;
     }
 
     footer a {
-      color: #0366d6;
+      color: var(--fcfs-red);
       text-decoration: none;
     }
 
     footer a:hover {
+      color: var(--fcfs-red-hover);
       text-decoration: underline;
+    }
+
+    footer strong {
+      color: var(--fcfs-light-text);
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -96,17 +117,18 @@
       margin-bottom: 16px;
       font-weight: 600;
       line-height: 1.25;
+      color: var(--fcfs-light-text);
     }
 
     h1 {
       font-size: 2em;
-      border-bottom: 2px solid #e1e4e8;
+      border-bottom: 2px solid var(--fcfs-border);
       padding-bottom: 10px;
     }
 
     h2 {
       font-size: 1.5em;
-      border-bottom: 1px solid #e1e4e8;
+      border-bottom: 1px solid var(--fcfs-border);
       padding-bottom: 8px;
     }
 
@@ -115,16 +137,18 @@
     }
 
     a {
-      color: #0366d6;
+      color: var(--fcfs-red);
       text-decoration: none;
     }
 
     a:hover {
+      color: var(--fcfs-red-hover);
       text-decoration: underline;
     }
 
     code {
-      background-color: #f6f8fa;
+      background-color: rgba(255, 255, 255, 0.05);
+      color: var(--fcfs-red);
       padding: 2px 6px;
       border-radius: 3px;
       font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
@@ -132,7 +156,8 @@
     }
 
     pre {
-      background-color: #f6f8fa;
+      background-color: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--fcfs-border);
       padding: 16px;
       border-radius: 6px;
       overflow-x: auto;
@@ -142,6 +167,7 @@
     pre code {
       background-color: transparent;
       padding: 0;
+      color: var(--fcfs-light-text);
     }
 
     table {
@@ -152,14 +178,19 @@
 
     table th,
     table td {
-      border: 1px solid #e1e4e8;
+      border: 1px solid var(--fcfs-border);
       padding: 8px 12px;
       text-align: left;
     }
 
     table th {
-      background-color: #f6f8fa;
+      background-color: rgba(255, 255, 255, 0.05);
       font-weight: 600;
+      color: var(--fcfs-light-text);
+    }
+
+    table td {
+      color: var(--fcfs-light-text);
     }
 
     img {
@@ -171,15 +202,15 @@
 
     hr {
       height: 2px;
-      background-color: #e1e4e8;
+      background-color: var(--fcfs-border);
       border: none;
       margin: 24px 0;
     }
 
     blockquote {
-      border-left: 4px solid #dfe2e5;
+      border-left: 4px solid var(--fcfs-red);
       padding-left: 16px;
-      color: #6a737d;
+      color: var(--fcfs-muted-text);
       margin: 16px 0;
     }
 
@@ -190,6 +221,15 @@
 
     li {
       margin: 8px 0;
+    }
+
+    /* Ensure paragraphs are visible */
+    p {
+      color: var(--fcfs-light-text);
+    }
+
+    strong {
+      color: var(--fcfs-light-text);
     }
 
     @media (max-width: 768px) {
@@ -208,6 +248,28 @@
       nav a {
         display: block;
         margin: 5px 0;
+      }
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background-color: white;
+        color: black;
+      }
+
+      header {
+        background-color: white;
+        color: black;
+        border: 1px solid #ccc;
+      }
+
+      h1, h2, h3, h4, h5, h6, p, strong {
+        color: black;
+      }
+
+      a {
+        color: #0366d6;
       }
     }
   </style>
