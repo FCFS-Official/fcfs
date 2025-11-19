@@ -14,9 +14,26 @@ layout: default
     </div>
   </div>
 
-  <div class="language-info">
-    <span class="flag">{{ page.lang_flag }}</span>
-    <h1>{{ page.title }}</h1>
+  <!-- Download Section -->
+  <div class="download-section">
+    <h3>{{ page.download_label }}</h3>
+    <div class="pdf-links">
+      {% if page.pdf_full %}
+      <a href="{{ page.pdf_full | relative_url }}" download class="pdf-button">
+        📄 {{ page.label_full }} (PDF)
+      </a>
+      {% endif %}
+      {% if page.pdf_short %}
+      <a href="{{ page.pdf_short | relative_url }}" download class="pdf-button">
+        📄 {{ page.label_short }} (PDF)
+      </a>
+      {% endif %}
+      {% if page.pdf_pro %}
+      <a href="{{ page.pdf_pro | relative_url }}" download class="pdf-button">
+        📄 Pro (PDF)
+      </a>
+      {% endif %}
+    </div>
   </div>
 
   <!-- Version Switcher -->
@@ -42,31 +59,15 @@ layout: default
     </div>
   </div>
   {% endif %}
-
-  <!-- Download Section -->
-  <div class="download-section">
-    <h3>{{ page.download_label }}</h3>
-    <div class="pdf-links">
-      {% if page.pdf_full %}
-      <a href="{{ page.pdf_full | relative_url }}" download class="pdf-button">
-        📄 {{ page.label_full }} (PDF)
-      </a>
-      {% endif %}
-      {% if page.pdf_short %}
-      <a href="{{ page.pdf_short | relative_url }}" download class="pdf-button">
-        📄 {{ page.label_short }} (PDF)
-      </a>
-      {% endif %}
-      {% if page.pdf_pro %}
-      <a href="{{ page.pdf_pro | relative_url }}" download class="pdf-button">
-        📄 Pro (PDF)
-      </a>
-      {% endif %}
-    </div>
-  </div>
 </div>
 
-<hr style="margin: 30px 0;">
+<!-- Title (Below Header) -->
+<div class="language-info">
+  <span class="flag">{{ page.lang_flag }}</span>
+  <h1>{{ page.title }}</h1>
+</div>
+
+<hr style="margin: 30px 0; border-color: #333;">
 
 <div class="rules-content">
   {{ content }}
@@ -77,131 +78,45 @@ layout: default
 </div>
 
 <style>
+  /* Dark Theme Colors matching FCFS site */
+  :root {
+    --fcfs-dark-bg: #1a1a1a;
+    --fcfs-darker-bg: #0f0f0f;
+    --fcfs-red: #EF4444;
+    --fcfs-red-hover: #DC2626;
+    --fcfs-light-text: #e5e5e5;
+    --fcfs-muted-text: #a0a0a0;
+    --fcfs-border: #333;
+  }
+
+  body {
+    background-color: var(--fcfs-darker-bg);
+    color: var(--fcfs-light-text);
+  }
+
   .rules-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: var(--fcfs-dark-bg);
+    color: var(--fcfs-light-text);
     padding: 30px;
     border-radius: 10px;
     margin-bottom: 30px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    border: 1px solid var(--fcfs-border);
   }
 
-  .language-info {
-    text-align: center;
-    margin-bottom: 25px;
-  }
-
-  .language-info .flag {
-    font-size: 3em;
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  .language-info h1 {
-    color: white;
-    border: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  /* Version Switcher */
-  .version-switcher {
-    background: rgba(255, 255, 255, 0.15);
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px 0;
-    text-align: center;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-  }
-
-  .version-switcher h3 {
-    margin: 0 0 15px 0;
-    color: white;
-    font-size: 1.1em;
-  }
-
-  .version-buttons {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .version-btn {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.25);
-    color: white;
-    padding: 12px 28px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.05em;
-    transition: all 0.3s;
-    border: 2px solid rgba(255, 255, 255, 0.4);
-  }
-
-  .version-btn:hover {
-    background: rgba(255, 255, 255, 0.35);
-    text-decoration: none;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  }
-
-  .version-btn.active {
-    background: white;
-    color: #667eea;
-    border-color: white;
-    font-weight: 700;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  }
-
-  .download-section {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px 0;
-    text-align: center;
-  }
-
-  .download-section h3 {
-    margin: 0 0 15px 0;
-    color: white;
-  }
-
-  .pdf-links {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .pdf-button {
-    display: inline-block;
-    background: white;
-    color: #667eea;
-    padding: 12px 24px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  }
-
-  .pdf-button:hover {
-    background: #f0f0f0;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    text-decoration: none;
-  }
-
+  /* Language Switcher */
   .language-switcher {
     text-align: center;
-    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--fcfs-border);
   }
 
   .language-switcher h3 {
-    color: white;
-    margin-bottom: 15px;
+    color: var(--fcfs-light-text);
+    margin: 0 0 15px 0;
+    font-size: 1.1em;
+    font-weight: 600;
   }
 
   .lang-buttons {
@@ -213,41 +128,217 @@ layout: default
 
   .lang-btn {
     display: inline-block;
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--fcfs-light-text);
     padding: 10px 20px;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s;
-    border: 2px solid transparent;
+    border: 2px solid var(--fcfs-border);
   }
 
   .lang-btn:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--fcfs-red);
     text-decoration: none;
   }
 
   .lang-btn.active {
-    background: white;
-    color: #667eea;
-    border-color: white;
+    background: var(--fcfs-red);
+    color: white;
+    border-color: var(--fcfs-red);
     font-weight: 700;
   }
 
+  /* Download Section */
+  .download-section {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    text-align: center;
+    border: 1px solid var(--fcfs-border);
+  }
+
+  .download-section h3 {
+    margin: 0 0 15px 0;
+    color: var(--fcfs-light-text);
+    font-weight: 600;
+  }
+
+  .pdf-links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .pdf-button {
+    display: inline-block;
+    background: var(--fcfs-red);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    border: 2px solid var(--fcfs-red);
+  }
+
+  .pdf-button:hover {
+    background: var(--fcfs-red-hover);
+    border-color: var(--fcfs-red-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(239, 68, 68, 0.4);
+    text-decoration: none;
+  }
+
+  /* Version Switcher */
+  .version-switcher {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0 0 0;
+    text-align: center;
+    border: 1px solid var(--fcfs-border);
+  }
+
+  .version-switcher h3 {
+    margin: 0 0 15px 0;
+    color: var(--fcfs-light-text);
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+
+  .version-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .version-btn {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--fcfs-light-text);
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05em;
+    transition: all 0.3s;
+    border: 2px solid var(--fcfs-border);
+  }
+
+  .version-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--fcfs-red);
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+
+  .version-btn.active {
+    background: var(--fcfs-red);
+    color: white;
+    border-color: var(--fcfs-red);
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+  }
+
+  /* Title Section (Below Header) */
+  .language-info {
+    text-align: center;
+    margin: 30px 0;
+  }
+
+  .language-info .flag {
+    font-size: 3em;
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .language-info h1 {
+    color: var(--fcfs-light-text);
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-size: 2.2em;
+  }
+
+  /* Rules Content */
   .rules-content {
     max-width: 900px;
     margin: 0 auto;
-    padding: 20px;
-    background: white;
+    padding: 30px;
+    background: var(--fcfs-dark-bg);
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    border: 1px solid var(--fcfs-border);
   }
 
   .rules-content h1:first-child {
     margin-top: 0;
   }
 
+  .rules-content h1,
+  .rules-content h2,
+  .rules-content h3,
+  .rules-content h4,
+  .rules-content h5,
+  .rules-content h6 {
+    color: var(--fcfs-light-text);
+  }
+
+  .rules-content a {
+    color: var(--fcfs-red);
+  }
+
+  .rules-content a:hover {
+    color: var(--fcfs-red-hover);
+  }
+
+  .rules-content code {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--fcfs-red);
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+
+  .rules-content pre {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--fcfs-border);
+  }
+
+  .rules-content table {
+    border-color: var(--fcfs-border);
+  }
+
+  .rules-content th,
+  .rules-content td {
+    border-color: var(--fcfs-border);
+  }
+
+  .rules-content th {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .rules-content blockquote {
+    border-left-color: var(--fcfs-red);
+    color: var(--fcfs-muted-text);
+  }
+
+  /* Table of contents styling */
+  .rules-content > ul:first-of-type {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 20px 20px 20px 50px;
+    border-radius: 6px;
+    border-left: 4px solid var(--fcfs-red);
+  }
+
+  /* Back to Top */
   .back-to-top {
     text-align: center;
     margin: 40px 0 20px 0;
@@ -255,38 +346,21 @@ layout: default
 
   .btn-top {
     display: inline-block;
-    background: #667eea;
+    background: var(--fcfs-red);
     color: white;
     padding: 12px 30px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
   }
 
   .btn-top:hover {
-    background: #764ba2;
+    background: var(--fcfs-red-hover);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 8px rgba(239, 68, 68, 0.4);
     text-decoration: none;
-  }
-
-  /* Ensure proper spacing for rules content */
-  .rules-content > *:first-child {
-    margin-top: 0;
-  }
-
-  .rules-content img {
-    max-width: 400px;
-  }
-
-  /* Table of contents styling */
-  .rules-content > ul:first-of-type {
-    background: #f6f8fa;
-    padding: 20px 20px 20px 50px;
-    border-radius: 6px;
-    border-left: 4px solid #667eea;
   }
 
   /* Mobile responsiveness */
@@ -310,11 +384,15 @@ layout: default
     }
 
     .rules-content {
-      padding: 15px;
+      padding: 20px 15px;
     }
 
     .language-info .flag {
       font-size: 2em;
+    }
+
+    .language-info h1 {
+      font-size: 1.6em;
     }
   }
 
@@ -330,6 +408,12 @@ layout: default
     .rules-content {
       box-shadow: none;
       max-width: 100%;
+      background: white;
+      color: black;
+    }
+
+    .language-info h1 {
+      color: black;
     }
   }
 </style>
