@@ -1,15 +1,21 @@
--- Pandoc Lua filter to remove manual table of contents from PDF generation
--- This filter removes the section between the page break div and the separator
+-- Pandoc Lua filter to insert TOC after cover page and remove manual TOC
+-- This ensures: Cover page -> Page break -> Pandoc TOC -> Content
 
 local in_manual_toc = false
 local found_page_break = false
+local toc_inserted = false
 
 function Div(elem)
   -- Check if this is the page break div
   if elem.attributes.style and elem.attributes.style:match("page%-break%-after") then
     found_page_break = true
     in_manual_toc = true
-    return elem  -- Keep the page break
+
+    -- After the page break, insert the Pandoc-generated TOC
+    -- Use a placeholder that Pandoc will recognize
+    local toc_placeholder = pandoc.RawBlock('latex', '\\tableofcontents\n\\newpage')
+
+    return {elem, toc_placeholder}  -- Return both the page break and TOC
   end
   return elem
 end
