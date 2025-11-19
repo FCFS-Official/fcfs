@@ -31,6 +31,13 @@ function Pandoc(doc)
   -- Debug: Add VISIBLE marker in PDF to confirm filter is running
   table.insert(new_blocks, pandoc.Para({pandoc.Str("[DEBUG: LUA FILTER IS RUNNING - TOTAL BLOCKS: " .. #doc.blocks .. "]")}))
 
+  -- Debug: Show first 10 block types in PDF
+  local debug_info = "Block types: "
+  for i = 1, math.min(10, #doc.blocks) do
+    debug_info = debug_info .. doc.blocks[i].t .. ", "
+  end
+  table.insert(new_blocks, pandoc.Para({pandoc.Str(debug_info)}))
+
   while i <= #doc.blocks do
     local block = doc.blocks[i]
 

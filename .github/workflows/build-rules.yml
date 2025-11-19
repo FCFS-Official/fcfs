@@ -73,7 +73,7 @@ jobs:
               # Common Pandoc options (no --toc flag, we insert TOC manually via Lua filter)
               # Using markdown format to parse HTML divs properly
               if [[ $file == rules/ru/* ]]; then
-                pandoc "$file" -o "$output_file" --pdf-engine=xelatex --resource-path="$md_dir:." -f markdown --lua-filter=.github/workflows/test-simple.lua -V mainfont="Noto Serif" -V geometry:margin=1in -V documentclass=article -V fontsize=11pt -V colorlinks=true -V linkcolor=blue -V urlcolor=blue -V lang=ru
+                pandoc "$file" -o "$output_file" --pdf-engine=xelatex --resource-path="$md_dir:." -f markdown --lua-filter=.github/workflows/remove-manual-toc.lua -V mainfont="Noto Serif" -V geometry:margin=1in -V documentclass=article -V fontsize=11pt -V colorlinks=true -V linkcolor=blue -V urlcolor=blue -V lang=ru
               elif [[ $file == rules/de/* ]]; then
                 pandoc "$file" -o "$output_file" --pdf-engine=xelatex --resource-path="$md_dir:." -f markdown-implicit_figures --lua-filter=.github/workflows/remove-manual-toc.lua -V mainfont="Noto Serif" -V geometry:margin=1in -V documentclass=article -V fontsize=11pt -V colorlinks=true -V linkcolor=blue -V urlcolor=blue -V lang=de
               elif [[ $file == rules/pl/* ]]; then
