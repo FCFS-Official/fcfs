@@ -70,14 +70,17 @@ jobs:
               # Get the directory containing the markdown file for resource-path
               md_dir=$(dirname "$file")
 
+              # Common Pandoc options
+              PANDOC_COMMON="--pdf-engine=xelatex --resource-path=\"$md_dir:.\" -f markdown+raw_html-implicit_figures --lua-filter=.github/workflows/remove-manual-toc.lua --toc --toc-depth=3 -V mainfont=\"Noto Serif\" -V geometry:margin=1in -V documentclass=article -V fontsize=11pt -V colorlinks=true -V linkcolor=blue -V urlcolor=blue"
+
               if [[ $file == rules/ru/* ]]; then
-                pandoc "$file" -o "$output_file" --pdf-engine=xelatex --resource-path="$md_dir:." -f markdown+raw_html-implicit_figures --toc --toc-depth=3 -V toc-title="Содержание" -V mainfont="Noto Serif" -V lang=ru -V geometry:margin=1in -V documentclass=article -V fontsize=11pt -V colorlinks=true -V linkcolor=blue -V urlcolor=blue
+                pandoc "$file" -o "$output_file" $PANDOC_COMMON -V toc-title="Содержание" -V lang=ru
               elif [[ $file == rules/de/* ]]; then
-                pandoc "$file" -o "$output_file" --pdf-engine=xelatex --resource-path="$md_dir:." -f markdown+raw_html-implicit_figures --toc --toc-depth=3 -V toc-title="Inhaltsverzeichnis" -V mainfont="Noto Serif" -V lang=de -V geometry:margin=1in -V documentclass=article -V fontsize=11pt -V colorlinks=true -V linkcolor=blue -V urlcolor=blue
+                pandoc "$file" -o "$output_file" $PANDOC_COMMON -V toc-title="Inhaltsverzeichnis" -V lang=de
               elif [[ $file == rules/pl/* ]]; then
-                pandoc "$file" -o "$output_file" --pdf-engine=xelatex --resource-path="$md_dir:." -f markdown+raw_html-implicit_figures --toc --toc-depth=3 -V toc-title="Spis treści" -V mainfont="Noto Serif" -V lang=pl -V geometry:margin=1in -V documentclass=article -V fontsize=11pt -V colorlinks=true -V linkcolor=blue -V urlcolor=blue
+                pandoc "$file" -o "$output_file" $PANDOC_COMMON -V toc-title="Spis treści" -V lang=pl
               else
-                pandoc "$file" -o "$output_file" --pdf-engine=xelatex --resource-path="$md_dir:." -f markdown+raw_html-implicit_figures --toc --toc-depth=3 -V toc-title="Table of Contents" -V mainfont="Noto Serif" -V lang=en -V geometry:margin=1in -V documentclass=article -V fontsize=11pt -V colorlinks=true -V linkcolor=blue -V urlcolor=blue
+                pandoc "$file" -o "$output_file" $PANDOC_COMMON -V toc-title="Table of Contents" -V lang=en
               fi
 
               echo "Created: $output_file"

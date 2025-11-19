@@ -1,19 +1,16 @@
-![Официальный логотип](../../media/logo/sign/raster/half_dragon_red_white.png)
+<div style="text-align: center;">
+
+![](../../media/logo/sign/raster/half_dragon_red_white.png)
+
+</div>
+
+<div style="text-align: center;">
 
 **Официальные правила: 25.03.2025**
 
----
+</div>
 
 <div style="page-break-after: always;"></div>
-
-<!--
-===========================================
-Manual TOC below - for markdown preview only
-Hidden in PDF - Pandoc auto-generates TOC
-===========================================
--->
-
-<div class="manual-toc-only">
 
 ## Содержание
 - [1. Общее положение](#header-1)
@@ -38,8 +35,6 @@ Hidden in PDF - Pandoc auto-generates TOC
 - [20. Снятие спортсмена](#header-20)
 - [21. Дисквалификация](#header-21)
 - [22. Весовые Категории и продолжительность поединков](#header-22)
-
-</div>
 
 ---
 
