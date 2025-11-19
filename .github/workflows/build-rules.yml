@@ -67,14 +67,17 @@ jobs:
               output_file="$output_dir/${filename}.pdf"
 
               # Detect language and apply language-specific settings
+              # Get the directory containing the markdown file for resource-path
+              md_dir=$(dirname "$file")
+
               if [[ $file == rules/ru/* ]]; then
-                pandoc "$file" -o "$output_file" --pdf-engine=xelatex -V mainfont="DejaVu Serif" -V lang=ru -V geometry:margin=1in -V documentclass=article -V fontsize=11pt --toc --toc-depth=3 -V colorlinks=true -V linkcolor=blue -V urlcolor=blue
+                pandoc "$file" -o "$output_file" --pdf-engine=xelatex --resource-path="$md_dir:." -f markdown+raw_html -V mainfont="DejaVu Serif" -V lang=ru -V geometry:margin=1in -V documentclass=article -V fontsize=11pt -V colorlinks=true -V linkcolor=blue -V urlcolor=blue
               elif [[ $file == rules/de/* ]]; then
-                pandoc "$file" -o "$output_file" --pdf-engine=xelatex -V mainfont="DejaVu Serif" -V lang=de -V geometry:margin=1in -V documentclass=article -V fontsize=11pt --toc --toc-depth=3 -V colorlinks=true -V linkcolor=blue -V urlcolor=blue
+                pandoc "$file" -o "$output_file" --pdf-engine=xelatex --resource-path="$md_dir:." -f markdown+raw_html -V mainfont="DejaVu Serif" -V lang=de -V geometry:margin=1in -V documentclass=article -V fontsize=11pt -V colorlinks=true -V linkcolor=blue -V urlcolor=blue
               elif [[ $file == rules/pl/* ]]; then
-                pandoc "$file" -o "$output_file" --pdf-engine=xelatex -V mainfont="DejaVu Serif" -V lang=pl -V geometry:margin=1in -V documentclass=article -V fontsize=11pt --toc --toc-depth=3 -V colorlinks=true -V linkcolor=blue -V urlcolor=blue
+                pandoc "$file" -o "$output_file" --pdf-engine=xelatex --resource-path="$md_dir:." -f markdown+raw_html -V mainfont="DejaVu Serif" -V lang=pl -V geometry:margin=1in -V documentclass=article -V fontsize=11pt -V colorlinks=true -V linkcolor=blue -V urlcolor=blue
               else
-                pandoc "$file" -o "$output_file" --pdf-engine=xelatex -V mainfont="DejaVu Serif" -V lang=en -V geometry:margin=1in -V documentclass=article -V fontsize=11pt --toc --toc-depth=3 -V colorlinks=true -V linkcolor=blue -V urlcolor=blue
+                pandoc "$file" -o "$output_file" --pdf-engine=xelatex --resource-path="$md_dir:." -f markdown+raw_html -V mainfont="DejaVu Serif" -V lang=en -V geometry:margin=1in -V documentclass=article -V fontsize=11pt -V colorlinks=true -V linkcolor=blue -V urlcolor=blue
               fi
 
               echo "Created: $output_file"
