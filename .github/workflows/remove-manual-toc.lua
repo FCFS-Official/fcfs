@@ -31,14 +31,28 @@ function Pandoc(doc)
   while i <= #doc.blocks do
     local block = doc.blocks[i]
 
+    -- Debug: Log block type to stderr
+    io.stderr:write("Block " .. i .. " type: " .. block.t .. "\n")
+
     -- Check for Div element (HTML divs become Pandoc Divs)
     if block.t == "Div" then
+      io.stderr:write("  Found Div element\n")
+
+      -- Debug: Print all attributes
+      if block.attributes then
+        for k, v in pairs(block.attributes) do
+          io.stderr:write("    Attribute: " .. k .. " = " .. tostring(v) .. "\n")
+        end
+      end
+
       local has_page_break = false
 
       -- Check if Div has style attribute with page-break-after
       if block.attributes and block.attributes.style then
+        io.stderr:write("    Style attribute: " .. block.attributes.style .. "\n")
         if block.attributes.style:match('page%-break%-after') then
           has_page_break = true
+          io.stderr:write("    MATCHED page-break-after!\n")
         end
       end
 
@@ -48,12 +62,14 @@ function Pandoc(doc)
         for k, v in pairs(block.attributes) do
           if tostring(v):match('page%-break') then
             has_page_break = true
+            io.stderr:write("    MATCHED page-break in attribute!\n")
           end
         end
       end
 
       if has_page_break then
         found_page_break = true
+        io.stderr:write("  INSERTING PAGE BREAK AND TOC\n")
         -- Found page break div - insert page break
         table.insert(new_blocks, pandoc.RawBlock('latex', '\\newpage'))
 
@@ -70,8 +86,10 @@ function Pandoc(doc)
 
     -- Check if this is RawBlock HTML (fallback)
     if block.t == "RawBlock" and block.format == "html" then
+      io.stderr:write("  Found RawBlock HTML: " .. block.text:sub(1, 50) .. "\n")
       if block.text:match('page%-break%-after') then
         found_page_break = true
+        io.stderr:write("  MATCHED page-break in RawBlock!\n")
         -- Found page break - convert to LaTeX
         table.insert(new_blocks, pandoc.RawBlock('latex', '\\newpage'))
 
