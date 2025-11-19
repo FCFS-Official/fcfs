@@ -110,9 +110,9 @@ function Pandoc(doc)
   return pandoc.Pandoc(new_blocks, doc.meta)
 end
 
--- Return filters in the order they should be applied
+-- Return filter table with all functions
 return {
-  {Image = Image},  -- First pass: resize images on title page
-  {Header = Header}, -- Track when we leave title page
-  {Pandoc = Pandoc}  -- Second pass: handle TOC and page breaks
+  Image = Image,
+  Header = Header,
+  Pandoc = Pandoc
 }
